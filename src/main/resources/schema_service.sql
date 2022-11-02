@@ -1,0 +1,7 @@
+CREATE TABLE service (
+    id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    service_name VARCHAR(128) NOT NULL,
+    price DOUBLE(10,2) DEFAULT 0 NOT NULL,
+    id_device BIGINT DEFAULT 0 NOT NULL
+);
+CREATE UNIQUE INDEX service_id_index ON service (id);

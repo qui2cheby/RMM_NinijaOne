@@ -37,7 +37,8 @@ VALUES (5, 6, 1, 5, 5, '2022-11-01 23:22:46');
 
 ```
 
-
+See the PostCollection in file:
+/NinjaOne/NINJAONE.postman_collection.json
 
 
 

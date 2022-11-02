@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "e4a65765-5b4b-428a-b2d1-2d5c758e3498",
+		"name": "NINJAONE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SERVICE",
+			"item": [
+				{
+					"name": "SAVE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"serviceName\":\"Backup\",\n    \"price\":3,\n    \"idDevice\":{\"id\":1}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/service/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"service",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/service/delete/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"service",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DEVICE",
+			"item": [
+				{
+					"name": "SAVE_DEVICE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"system_name\":\"10\",\n    \"type\":\"WINDOWS_SERVER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/device/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"device",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/device/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"device",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DEVICE_UPDATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":2,\n    \"system_name\":\"Windows 11\",\n    \"type\":\"WINDOWS_SERVER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/device/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"device",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_DEVICE_BY_ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/device/get/by/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"device",
+								"get",
+								"by",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LEDGER",
+			"item": [
+				{
+					"name": "SAVE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idService\":{\"id\":2},\n    \"quantity\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/ledger/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"ledger",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTotalMonthByService",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"year\":\"2022\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/ledger/totalMonthly/byService",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"ledger",
+								"totalMonthly",
+								"byService"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "totalPriceByMonth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"year\":\"2022\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/ledger/totalPrice/byMonth",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"ledger",
+								"totalPrice",
+								"byMonth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
